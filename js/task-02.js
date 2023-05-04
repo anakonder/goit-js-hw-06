@@ -14,11 +14,12 @@ const elements = ingredients.map(element =>
 {
   const li = document.createElement('li');  
   li.textContent = element;
-  return li.outerHTML
+  li.classList.add('item')
+  return li
 }
 )
 
-ingredientsList.innerHTML = elements.join('')
+ingredientsList.append(...elements)
 
 
 
